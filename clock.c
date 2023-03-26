@@ -670,7 +670,7 @@ int main() {
 
 
 
-    printf("Saat:\n");
+    printf("Clock:\n");
 
     printClock(matrix);
 
