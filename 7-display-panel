@@ -1,0 +1,1379 @@
+#include <stdio.h>
+#include <time.h>
+#include <unistd.h>
+#include <stdlib.h>
+
+
+void printClock(int matrix[7][39]) {
+
+    for (int i = 0; i < 7; i++) {
+        for (int j = 0; j < 39; j++) {
+            if (matrix[i][j] == 1) {
+                printf("⬜");
+            }
+            else{
+                printf("⬛");
+            }
+
+        }
+        printf("\n");
+    }
+    printf("\n");
+
+
+}
+void panel1(int matrix[7][39],int bilgi[4][7]){
+    switch (bilgi[0][0]) {
+        case 0:
+
+            break;
+
+
+        case 1:
+
+            printf("aa = 1");
+            for (int i = 1; i < 3; ++i) {
+                matrix[i][0]=1;
+            }
+            break;
+
+        default:
+            break;
+
+    }
+    switch (bilgi[0][1]) {
+        case 0:
+            break;
+
+
+        case 1:
+            printf("ab = 1");
+            for (int i = 4; i < 6; ++i) {
+                matrix[i][0]=1;
+            }
+            break;
+
+        default:
+            break;
+
+    }
+    switch (bilgi[0][2]) {
+        case 0:
+
+            break;
+
+
+        case 1:
+            printf("ac = 1");
+            for (int i = 1; i < 8; ++i) {
+                matrix[0][i]=1;
+            }
+            break;
+
+        default:
+            break;
+
+    }
+    switch (bilgi[0][3]) {
+        case 0:
+
+            break;
+
+
+        case 1:
+            printf("ad = 1");
+            for (int i = 1; i < 8; ++i) {
+                matrix[3][i]=1;
+            }
+            break;
+
+        default:
+            break;
+
+    }
+    switch (bilgi[0][4]) {
+        case 0:
+
+
+            break;
+
+
+        case 1:
+            printf("ae = 1");
+            for (int i = 1; i < 8; ++i) {
+                matrix[6][i]=1;
+            }
+            break;
+
+        default:
+            break;
+
+    }
+    switch (bilgi[0][5]) {
+        case 0:
+
+
+            break;
+
+
+        case 1:
+            printf("af = 1");
+            for (int i = 1; i < 3; ++i) {
+                matrix[i][8]=1;
+            }
+            break;
+
+        default:
+            break;
+
+    }
+    switch (bilgi[0][6]) {
+        case 0:
+
+
+            break;
+
+
+        case 1:
+            printf("ag = 1");
+            for (int i = 4; i < 6; ++i) {
+                matrix[i][8]=1;
+            }
+            break;
+
+        default:
+            break;
+
+    }
+
+
+
+
+}
+void panel2(int matrix[7][39],int bilgi[4][7]){
+    switch (bilgi[1][0]) {
+        case 0:
+
+            break;
+
+
+        case 1:
+
+            printf("ba = 1");
+            for (int i = 1; i < 3; ++i) {
+                matrix[i][10]=1;
+            }
+            break;
+
+        default:
+            break;
+
+    }
+    switch (bilgi[1][1]) {
+        case 0:
+            break;
+
+
+        case 1:
+            printf("bb = 1");
+            for (int i = 4; i < 6; ++i) {
+                matrix[i][10]=1;
+            }
+            break;
+
+        default:
+            break;
+
+    }
+    switch (bilgi[1][2]) {
+        case 0:
+
+            break;
+
+
+        case 1:
+            printf("bc = 1");
+            for (int i = 11; i < 18; ++i) {
+                matrix[0][i]=1;
+            }
+            break;
+
+        default:
+            break;
+
+    }
+    switch (bilgi[1][3]) {
+        case 0:
+
+            break;
+
+
+        case 1:
+            printf("bd = 1");
+            for (int i = 11; i < 18; ++i) {
+                matrix[3][i]=1;
+            }
+            break;
+
+        default:
+            break;
+
+    }
+    switch (bilgi[1][4]) {
+        case 0:
+
+
+            break;
+
+
+        case 1:
+            printf("be = 1");
+            for (int i = 11; i < 18; ++i) {
+                matrix[6][i]=1;
+            }
+            break;
+
+        default:
+            break;
+
+    }
+    switch (bilgi[1][5]) {
+        case 0:
+
+
+            break;
+
+
+        case 1:
+            printf("bf = 1");
+            for (int i = 1; i < 3; ++i) {
+                matrix[i][18]=1;
+            }
+            break;
+
+        default:
+            break;
+
+    }
+    switch (bilgi[1][6]) {
+        case 0:
+
+
+            break;
+
+
+        case 1:
+            printf("bg = 1");
+            for (int i = 4; i < 6; ++i) {
+                matrix[i][18]=1;
+            }
+            break;
+
+        default:
+            break;
+
+    }
+
+
+
+
+}
+void panel3(int matrix[7][39],int bilgi[4][7]){
+    switch (bilgi[2][0]) {
+        case 0:
+
+            break;
+
+
+        case 1:
+
+            printf("ca = 1");
+            for (int i = 1; i < 3; ++i) {
+                matrix[i][20]=1;
+            }
+            break;
+
+        default:
+            break;
+
+    }
+    switch (bilgi[2][1]) {
+        case 0:
+            break;
+
+
+        case 1:
+            printf("cb = 1");
+            for (int i = 4; i < 6; ++i) {
+                matrix[i][20]=1;
+            }
+            break;
+
+        default:
+            break;
+
+    }
+    switch (bilgi[2][2]) {
+        case 0:
+
+            break;
+
+
+        case 1:
+            printf("cc = 1");
+            for (int i = 21; i < 28; ++i) {
+                matrix[0][i]=1;
+            }
+            break;
+
+        default:
+            break;
+
+    }
+    switch (bilgi[2][3]) {
+        case 0:
+
+            break;
+
+
+        case 1:
+            printf("cd = 1");
+            for (int i = 21; i < 28; ++i) {
+                matrix[3][i]=1;
+            }
+            break;
+
+        default:
+            break;
+
+    }
+    switch (bilgi[2][4]) {
+        case 0:
+
+
+            break;
+
+
+        case 1:
+            printf("ce = 1");
+            for (int i = 21; i < 28; ++i) {
+                matrix[6][i]=1;
+            }
+            break;
+
+        default:
+            break;
+
+    }
+    switch (bilgi[2][5]) {
+        case 0:
+
+
+            break;
+
+
+        case 1:
+            printf("cf = 1");
+            for (int i = 1; i < 3; ++i) {
+                matrix[i][28]=1;
+            }
+            break;
+
+        default:
+            break;
+
+    }
+    switch (bilgi[2][6]) {
+        case 0:
+
+
+            break;
+
+
+        case 1:
+            printf("cg = 1");
+            for (int i = 4; i < 6; ++i) {
+                matrix[i][28]=1;
+            }
+            break;
+
+        default:
+            break;
+
+    }
+
+
+
+
+}
+void panel4(int matrix[7][39],int bilgi[4][7]){
+    switch (bilgi[3][0]) {
+        case 0:
+
+            break;
+
+
+        case 1:
+
+            printf("da = 1");
+            for (int i = 1; i < 3; ++i) {
+                matrix[i][30]=1;
+            }
+            break;
+
+        default:
+            break;
+
+    }
+    switch (bilgi[3][1]) {
+        case 0:
+            break;
+
+
+        case 1:
+            printf("db = 1");
+            for (int i = 4; i < 6; ++i) {
+                matrix[i][30]=1;
+            }
+            break;
+
+        default:
+            break;
+
+    }
+    switch (bilgi[3][2]) {
+        case 0:
+
+            break;
+
+
+        case 1:
+            printf("dc = 1");
+            for (int i = 31; i < 38; ++i) {
+                matrix[0][i]=1;
+            }
+            break;
+
+        default:
+            break;
+
+    }
+    switch (bilgi[3][3]) {
+        case 0:
+
+            break;
+
+
+        case 1:
+            printf("dd = 1");
+            for (int i = 31; i < 38; ++i) {
+                matrix[3][i]=1;
+            }
+            break;
+
+        default:
+            break;
+
+    }
+    switch (bilgi[3][4]) {
+        case 0:
+
+
+            break;
+
+
+        case 1:
+            printf("de = 1");
+            for (int i = 31; i < 38; ++i) {
+                matrix[6][i]=1;
+            }
+            break;
+
+        default:
+            break;
+
+    }
+    switch (bilgi[3][5]) {
+        case 0:
+
+
+            break;
+
+
+        case 1:
+            printf("df = 1");
+            for (int i = 1; i < 3; ++i) {
+                matrix[i][38]=1;
+            }
+            break;
+
+        default:
+            break;
+
+    }
+    switch (bilgi[3][6]) {
+        case 0:
+
+
+            break;
+
+
+        case 1:
+            printf("dg = 1");
+            for (int i = 4; i < 6; ++i) {
+                matrix[i][38]=1;
+            }
+            break;
+
+        default:
+            break;
+
+    }
+
+
+
+
+}
+
+
+void birlerfonk(int matrix[7][39],int birler){
+
+
+    switch (birler) {
+        case 1:
+            for (int i = 0; i < 9; ++i) {
+                matrix[i][38]=1;
+            }
+            break;
+
+        case 2:
+            for (int i = 30; i < 39; ++i) {
+                matrix[0][i]=1;
+            }
+            for (int i = 0; i < 4; ++i) {
+                matrix[i][38]=1;
+            }
+            for (int i = 30; i < 39; ++i) {
+                matrix[3][i]=1;
+            }
+            for (int i = 3; i < 9; ++i) {
+                matrix[i][30]=1;
+            }
+            for (int i = 30; i < 39; ++i) {
+                matrix[6][i]=1;
+            }
+
+            break;
+        case 3:
+            for (int i = 30; i < 39; ++i) {
+                matrix[0][i]=1;
+            }
+            for (int i = 0; i < 9; ++i) {
+                matrix[i][38]=1;
+            }
+            for (int i = 30; i < 39; ++i) {
+                matrix[3][i]=1;
+            }
+            for (int i = 30; i <39; ++i) {
+                matrix[6][i]=1;
+            }
+            break;
+        case 4:
+            for (int i = 0; i < 4; ++i) {
+                matrix[i][31]=1;
+            }
+            for (int i = 0; i < 9; ++i) {
+                matrix[i][38]=1;
+            }
+            for (int i = 31; i < 39; ++i) {
+                matrix[3][i]=1;
+            }
+            break;
+        case 5:
+            for (int i = 30; i < 39; ++i) {
+                matrix[0][i]=1;
+            }
+            for (int i = 0; i < 4; ++i) {
+                matrix[i][30]=1;
+            }
+            for (int i = 30; i < 39; ++i) {
+                matrix[3][i]=1;
+            }
+            for (int i = 3; i < 9; ++i) {
+                matrix[i][38]=1;
+            }
+            for (int i = 30; i < 39; ++i) {
+                matrix[6][i]=1;
+            }
+            break;
+        case 6:
+            for (int i = 30; i < 39; ++i) {
+                matrix[0][i]=1;
+            }
+            for (int i = 0; i < 9; ++i) {
+                matrix[i][30]=1;
+            }
+            for (int i = 30; i < 39; ++i) {
+                matrix[6][i]=1;
+            }
+            for (int i = 30; i < 39; ++i) {
+                matrix[3][i]=1;
+            }
+            for (int i = 3; i < 9; ++i) {
+                matrix[i][38]=1;
+            }
+            break;
+        case 7:
+            for (int i = 0; i < 9; ++i) {
+                matrix[i][38]=1;
+            }
+            for (int i = 30; i < 39; ++i) {
+                matrix[0][i]=1;
+            }
+            break;
+        case 8:
+            for (int i = 0; i < 9; ++i) {
+                matrix[i][38]=1;
+            }
+            for (int i = 30; i < 39; ++i) {
+                matrix[0][i]=1;
+            }
+            for (int i = 0; i < 9; ++i) {
+                matrix[i][30]=1;
+            }
+            for (int i = 0; i < 9; ++i) {
+                matrix[i][38]=1;
+            }
+            for (int i = 30; i < 39; ++i) {
+                matrix[3][i]=1;
+            }
+            for (int i = 30; i < 39; ++i) {
+                matrix[6][i]=1;
+            }
+            break;
+        case 9:
+            for (int i = 0; i < 9; ++i) {
+                matrix[i][38]=1;
+            }
+            for (int i = 30; i < 39; ++i) {
+                matrix[0][i]=1;
+            }
+            for (int i = 0; i < 4; ++i) {
+                matrix[i][30]=1;
+            }
+
+            for (int i = 30; i < 39; ++i) {
+                matrix[3][i]=1;
+            }
+            for (int i = 30; i < 39; ++i) {
+                matrix[6][i]=1;
+            }
+            break;
+        case 0:
+            for (int i = 0; i < 9; ++i) {
+                matrix[i][38]=1;
+            }
+            for (int i = 30; i < 39; ++i) {
+                matrix[0][i]=1;
+            }
+            for (int i = 0; i < 9; ++i) {
+                matrix[i][30]=1;
+            }
+            for (int i = 0; i < 9; ++i) {
+                matrix[i][38]=1;
+            }
+            for (int i = 30; i < 39; ++i) {
+                matrix[6][i]=1;
+            }
+            break;
+
+    }
+
+
+
+
+
+
+}
+void onlarfonk(int matrix[7][39],int onlar){
+
+
+    switch (onlar) {
+        case 1:
+            for (int i = 0; i < 9; ++i) {
+                matrix[i][28]=1;
+            }
+            break;
+
+        case 2:
+            for (int i = 20; i < 29; ++i) {
+                matrix[0][i]=1;
+            }
+            for (int i = 0; i < 4; ++i) {
+                matrix[i][28]=1;
+            }
+            for (int i = 20; i < 29; ++i) {
+                matrix[3][i]=1;
+            }
+            for (int i = 3; i < 9; ++i) {
+                matrix[i][20]=1;
+            }
+            for (int i = 20; i < 29; ++i) {
+                matrix[6][i]=1;
+            }
+
+            break;
+        case 3:
+            for (int i = 20; i < 29; ++i) {
+                matrix[0][i]=1;
+            }
+            for (int i = 0; i < 9; ++i) {
+                matrix[i][28]=1;
+            }
+            for (int i = 20; i < 29; ++i) {
+                matrix[3][i]=1;
+            }
+            for (int i = 20; i <29; ++i) {
+                matrix[6][i]=1;
+            }
+            break;
+        case 4:
+            for (int i = 0; i < 4; ++i) {
+                matrix[i][21]=1;
+            }
+            for (int i = 0; i < 9; ++i) {
+                matrix[i][28]=1;
+            }
+            for (int i = 21; i < 29; ++i) {
+                matrix[3][i]=1;
+            }
+            break;
+        case 5:
+            for (int i = 20; i < 29; ++i) {
+                matrix[0][i]=1;
+            }
+            for (int i = 0; i < 4; ++i) {
+                matrix[i][20]=1;
+            }
+            for (int i = 20; i < 29; ++i) {
+                matrix[3][i]=1;
+            }
+            for (int i = 3; i < 9; ++i) {
+                matrix[i][28]=1;
+            }
+            for (int i = 20; i < 29; ++i) {
+                matrix[6][i]=1;
+            }
+            break;
+        case 6:
+            for (int i = 20; i < 29; ++i) {
+                matrix[0][i]=1;
+            }
+            for (int i = 0; i < 9; ++i) {
+                matrix[i][20]=1;
+            }
+            for (int i = 20; i < 29; ++i) {
+                matrix[6][i]=1;
+            }
+            for (int i = 20; i < 29; ++i) {
+                matrix[3][i]=1;
+            }
+            for (int i = 3; i < 9; ++i) {
+                matrix[i][28]=1;
+            }
+            break;
+        case 7:
+            for (int i = 0; i < 9; ++i) {
+                matrix[i][28]=1;
+            }
+            for (int i = 20; i < 29; ++i) {
+                matrix[0][i]=1;
+            }
+            break;
+        case 8:
+            for (int i = 0; i < 9; ++i) {
+                matrix[i][28]=1;
+            }
+            for (int i = 20; i < 29; ++i) {
+                matrix[0][i]=1;
+            }
+            for (int i = 0; i < 9; ++i) {
+                matrix[i][20]=1;
+            }
+            for (int i = 0; i < 9; ++i) {
+                matrix[i][28]=1;
+            }
+            for (int i = 20; i < 29; ++i) {
+                matrix[3][i]=1;
+            }
+            for (int i = 20; i < 29; ++i) {
+                matrix[6][i]=1;
+            }
+            break;
+        case 9:
+            for (int i = 0; i < 9; ++i) {
+                matrix[i][28]=1;
+            }
+            for (int i = 20; i < 29; ++i) {
+                matrix[0][i]=1;
+            }
+            for (int i = 0; i < 4; ++i) {
+                matrix[i][20]=1;
+            }
+
+            for (int i = 20; i < 29; ++i) {
+                matrix[3][i]=1;
+            }
+            for (int i = 20; i < 29; ++i) {
+                matrix[6][i]=1;
+            }
+            break;
+        case 0:
+            for (int i = 0; i < 9; ++i) {
+                matrix[i][28]=1;
+            }
+            for (int i = 20; i < 29; ++i) {
+                matrix[0][i]=1;
+            }
+            for (int i = 0; i < 9; ++i) {
+                matrix[i][20]=1;
+            }
+            for (int i = 0; i < 9; ++i) {
+                matrix[i][28]=1;
+            }
+            for (int i = 20; i < 29; ++i) {
+                matrix[6][i]=1;
+            }
+            break;
+
+
+
+    }
+
+
+
+
+}
+void yuzlerfonk(int matrix[7][39],int yuzler){
+
+
+
+
+    switch (yuzler) {
+        case 1:
+            for (int i = 0; i < 9; ++i) {
+                matrix[i][18]=1;
+            }
+            break;
+
+        case 2:
+            for (int i = 10; i < 19; ++i) {
+                matrix[0][i]=1;
+            }
+            for (int i = 0; i < 4; ++i) {
+                matrix[i][18]=1;
+            }
+            for (int i = 10; i < 19; ++i) {
+                matrix[3][i]=1;
+            }
+            for (int i = 3; i < 9; ++i) {
+                matrix[i][10]=1;
+            }
+            for (int i = 10; i < 19; ++i) {
+                matrix[6][i]=1;
+            }
+
+            break;
+        case 3:
+            for (int i = 10; i < 19; ++i) {
+                matrix[0][i]=1;
+            }
+            for (int i = 0; i < 9; ++i) {
+                matrix[i][18]=1;
+            }
+            for (int i = 10; i < 19; ++i) {
+                matrix[3][i]=1;
+            }
+            for (int i = 10; i < 19; ++i) {
+                matrix[6][i]=1;
+            }
+            break;
+        case 4:
+            for (int i = 0; i < 4; ++i) {
+                matrix[i][10]=1;
+            }
+            for (int i = 0; i < 9; ++i) {
+                matrix[i][18]=1;
+            }
+            for (int i = 10; i < 19; ++i) {
+                matrix[3][i]=1;
+            }
+            break;
+        case 5:
+            for (int i = 10; i < 19; ++i) {
+                matrix[0][i]=1;
+            }
+            for (int i = 0; i < 4; ++i) {
+                matrix[i][10]=1;
+            }
+            for (int i = 10; i < 19; ++i) {
+                matrix[3][i]=1;
+            }
+            for (int i = 3; i < 9; ++i) {
+                matrix[i][18]=1;
+            }
+            for (int i = 10; i < 19; ++i) {
+                matrix[6][i]=1;
+            }
+            break;
+        case 6:
+            for (int i = 10; i < 19; ++i) {
+                matrix[0][i]=1;
+            }
+            for (int i = 0; i < 9; ++i) {
+                matrix[i][10]=1;
+            }
+            for (int i = 10; i < 19; ++i) {
+                matrix[6][i]=1;
+            }
+            for (int i = 10; i < 19; ++i) {
+                matrix[3][i]=1;
+            }
+            for (int i = 3; i < 9; ++i) {
+                matrix[i][18]=1;
+            }
+            break;
+        case 7:
+            for (int i = 0; i < 9; ++i) {
+                matrix[i][18]=1;
+            }
+            for (int i = 10; i < 19; ++i) {
+                matrix[0][i]=1;
+            }
+            break;
+        case 8:
+            for (int i = 0; i < 9; ++i) {
+                matrix[i][18]=1;
+            }
+            for (int i = 10; i < 19; ++i) {
+                matrix[0][i]=1;
+            }
+            for (int i = 0; i < 9; ++i) {
+                matrix[i][10]=1;
+            }
+            for (int i = 0; i < 9; ++i) {
+                matrix[i][18]=1;
+            }
+            for (int i = 10; i < 19; ++i) {
+                matrix[3][i]=1;
+            }
+            for (int i = 10; i < 19; ++i) {
+                matrix[6][i]=1;
+            }
+            break;
+        case 9:
+            for (int i = 0; i < 9; ++i) {
+                matrix[i][18]=1;
+            }
+            for (int i = 10; i < 19; ++i) {
+                matrix[0][i]=1;
+            }
+            for (int i = 0; i < 4; ++i) {
+                matrix[i][10]=1;
+            }
+
+            for (int i = 10; i < 19; ++i) {
+                matrix[3][i]=1;
+            }
+            for (int i = 10; i < 19; ++i) {
+                matrix[6][i]=1;
+            }
+            break;
+        case 0:
+            for (int i = 0; i < 9; ++i) {
+                matrix[i][18]=1;
+            }
+            for (int i = 10; i < 19; ++i) {
+                matrix[0][i]=1;
+            }
+            for (int i = 0; i < 9; ++i) {
+                matrix[i][10]=1;
+            }
+            for (int i = 0; i < 9; ++i) {
+                matrix[i][18]=1;
+            }
+            for (int i = 10; i < 19; ++i) {
+                matrix[6][i]=1;
+            }
+            break;
+
+
+
+    }
+
+}
+void binlerfonk(int matrix[7][39],int binler){
+
+    switch (binler) {
+        case 1:
+            for (int i = 0; i < 9; ++i) {
+                matrix[i][8]=1;
+            }
+            break;
+
+        case 2:
+            for (int i = 0; i < 9; ++i) {
+                matrix[0][i]=1;
+            }
+            for (int i = 0; i < 4; ++i) {
+                matrix[i][8]=1;
+            }
+            for (int i = 0; i < 9; ++i) {
+                matrix[3][i]=1;
+            }
+            for (int i = 3; i < 9; ++i) {
+                matrix[i][0]=1;
+            }
+            for (int i = 0; i < 9; ++i) {
+                matrix[6][i]=1;
+            }
+
+            break;
+        case 3:
+            for (int i = 0; i < 9; ++i) {
+                matrix[0][i]=1;
+            }
+            for (int i = 0; i < 9; ++i) {
+                matrix[i][8]=1;
+            }
+            for (int i = 0; i < 9; ++i) {
+                matrix[3][i]=1;
+            }
+            for (int i = 0; i < 9; ++i) {
+                matrix[6][i]=1;
+            }
+            break;
+        case 4:
+            for (int i = 0; i < 4; ++i) {
+                matrix[i][0]=1;
+            }
+            for (int i = 0; i < 9; ++i) {
+                matrix[i][8]=1;
+            }
+            for (int i = 0; i < 9; ++i) {
+                matrix[3][i]=1;
+            }
+            break;
+        case 5:
+            for (int i = 0; i < 9; ++i) {
+                matrix[0][i]=1;
+            }
+            for (int i = 0; i < 4; ++i) {
+                matrix[i][0]=1;
+            }
+            for (int i = 0; i < 9; ++i) {
+                matrix[3][i]=1;
+            }
+            for (int i = 3; i < 9; ++i) {
+                matrix[i][8]=1;
+            }
+            for (int i = 0; i < 9; ++i) {
+                matrix[6][i]=1;
+            }
+            break;
+        case 6:
+            for (int i = 0; i < 9; ++i) {
+                matrix[0][i]=1;
+            }
+            for (int i = 0; i < 9; ++i) {
+                matrix[i][0]=1;
+            }
+            for (int i = 0; i < 9; ++i) {
+                matrix[6][i]=1;
+            }
+            for (int i = 0; i < 9; ++i) {
+                matrix[3][i]=1;
+            }
+            for (int i = 3; i < 9; ++i) {
+                matrix[i][8]=1;
+            }
+            break;
+        case 7:
+            for (int i = 0; i < 9; ++i) {
+                matrix[i][8]=1;
+            }
+            for (int i = 0; i < 9; ++i) {
+                matrix[0][i]=1;
+            }
+            break;
+        case 8:
+            for (int i = 0; i < 9; ++i) {
+                matrix[i][8]=1;
+            }
+            for (int i = 0; i < 9; ++i) {
+                matrix[0][i]=1;
+            }
+            for (int i = 0; i < 9; ++i) {
+                matrix[i][0]=1;
+            }
+            for (int i = 0; i < 9; ++i) {
+                matrix[i][8]=1;
+            }
+            for (int i = 0; i < 9; ++i) {
+                matrix[3][i]=1;
+            }
+            for (int i = 0; i < 9; ++i) {
+                matrix[6][i]=1;
+            }
+            break;
+        case 9:
+            for (int i = 0; i < 9; ++i) {
+                matrix[i][8]=1;
+            }
+            for (int i = 0; i < 9; ++i) {
+                matrix[0][i]=1;
+            }
+            for (int i = 0; i < 4; ++i) {
+                matrix[i][0]=1;
+            }
+
+            for (int i = 0; i < 9; ++i) {
+                matrix[3][i]=1;
+            }
+            for (int i = 0; i < 9; ++i) {
+                matrix[6][i]=1;
+            }
+            break;
+        case 0:
+            for (int i = 0; i < 9; ++i) {
+                matrix[i][8]=1;
+            }
+            for (int i = 0; i < 9; ++i) {
+                matrix[0][i]=1;
+            }
+            for (int i = 0; i < 9; ++i) {
+                matrix[i][0]=1;
+            }
+            for (int i = 0; i < 9; ++i) {
+                matrix[i][8]=1;
+            }
+            for (int i = 0; i < 9; ++i) {
+                matrix[6][i]=1;
+            }
+            break;
+
+        default:
+            matrix[0][0]=0;
+            break;
+
+
+
+
+    }
+
+}
+
+
+void matrissifirla(int matrix[7][39]){
+
+    for (int i = 0; i < 7; ++i) {
+        for (int j = 0; j < 39; ++j) {
+            matrix[i][j] = 0;
+        }
+    }
+
+}
+void bilgimatrisisifirla(int bilgi[4][7]){
+    for (int i = 0; i < 7; ++i) {
+        for (int j = 0; j < 39; ++j) {
+            bilgi[i][j] = 0;
+        }
+    }
+
+
+}
+
+int main() {
+    int rastgelesayi;
+
+    int matrix[7][39] = {};
+    matrissifirla(matrix);
+
+    int binler, yuzler, onlar, birler;
+
+    int binleri, yuzleri, onlari, birleri;
+    ///scanf("%d %d %d %d", &binleri, &yuzleri,&onlari,&birleri);
+    int bilgi[4][7];
+    bilgimatrisisifirla(bilgi);
+    int secim;
+    int kronometre;
+    int sayac;
+    int kronometrebin, kronometreyuz, kronometreon,kronometrebir;
+
+
+
+
+    while (1){
+        bilgimatrisisifirla(bilgi);
+
+        matrissifirla(matrix);
+
+        puts("Sayi giriniz \n"
+             "1 Saati goster \n"
+             "2 Ekrana rastgele seyler yazdir /beta \n"
+             "3 Kronometre \n");
+        scanf("%d",&secim);
+        switch (secim) {
+            case 1:
+                while(1){
+                    time_t t = time(NULL);
+                    struct tm tm = *localtime(&t);
+                    int saat = tm.tm_min;
+                    onlar = (tm.tm_min / 10);
+                    birler = (saat - onlar * 10);
+
+                    int saat2= tm.tm_hour;
+                    binler = (tm.tm_hour / 10);
+                    yuzler = (saat2 - binler * 10);
+
+                    birlerfonk(matrix,birler);
+                    onlarfonk(matrix,onlar);
+                    yuzlerfonk(matrix,yuzler);
+                    binlerfonk(matrix,binler);
+
+
+
+                    panel1(matrix,bilgi);
+                    panel2(matrix,bilgi);
+                    panel3(matrix,bilgi);
+                    panel4(matrix,bilgi);
+
+
+                    printf("Clock:\n");
+                    printClock(matrix);
+                    sleep(1);
+                    matrissifirla(matrix);
+                    system("clear");
+                }
+                break;
+            case 2:
+                while(1){
+
+                    matrissifirla(matrix);
+                    srand(time(NULL));
+                    rastgelesayi = rand() % 8 ;
+                    printf("%d  ", rastgelesayi);
+
+                    switch (rastgelesayi) {
+                        case 0:
+                            bilgi[0][0]=1;
+                            break;
+
+                        case 1:
+                            bilgi[0][1]=1;
+                            break;
+                        case 2:
+                            bilgi[0][2]=1;
+                            break;
+                        case 3:
+                            bilgi[0][3]=1;
+                            break;
+                        case 4:
+                            bilgi[0][4]=1;
+                            break;
+                        case 5:
+                            bilgi[0][5]=1;
+                            break;
+                        case 6:
+                            bilgi[0][6]=1;
+                            break;
+                        default:
+                            for (int i = 0; i < 7; ++i) {
+                                bilgi[0][i]=1;
+
+                            }
+                            break;
+
+                    }
+                    birlerfonk(matrix,birler);
+                    onlarfonk(matrix,onlar);
+                    yuzlerfonk(matrix,yuzler);
+                    binlerfonk(matrix,binler);
+
+
+
+                    panel1(matrix,bilgi);
+                    panel2(matrix,bilgi);
+                    panel3(matrix,bilgi);
+                    panel4(matrix,bilgi);
+
+
+                    printf("Clock:\n");
+                    printClock(matrix);
+                    sleep(1);
+                    matrissifirla(matrix);
+                    system("clear");
+
+
+                }
+                break;
+
+            case 3:
+                puts("put the number?");
+                scanf(" %d", &kronometre);
+                sayac=kronometre;
+
+                while(1){
+
+                    matrissifirla(matrix);
+
+                    printf("Timer ");
+
+                    printf("%d ",sayac);
+                    sleep(0.5);
+
+
+                    binler = (sayac / 1000) % 10;
+                    yuzler = (sayac / 100) % 10;
+                    onlar=(sayac / 10) % 10;
+                    birler=sayac%10;
+
+
+
+
+                    birlerfonk(matrix,birler);
+                    onlarfonk(matrix,onlar);
+                    yuzlerfonk(matrix,yuzler);
+                    binlerfonk(matrix,binler);
+
+                    panel1(matrix,bilgi);
+                    panel2(matrix,bilgi);
+                    panel3(matrix,bilgi);
+                    panel4(matrix,bilgi);
+
+
+                    printf("Clock:\n");
+                    printClock(matrix);
+                    sleep(1);
+                    matrissifirla(matrix);
+                    system("clear");
+
+                    sayac=sayac-1;
+                    if (sayac<0){
+                        break;
+                    }
+
+                }
+                break;
+
+
+
+
+
+        }
+
+        puts("flag2");
+
+
+    }
+}
