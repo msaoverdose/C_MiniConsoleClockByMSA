@@ -1220,7 +1220,7 @@ int main() {
 
         puts("Sayi giriniz \n"
              "1 Saati goster \n"
-             "2 Ekrana rastgele seyler yazdir /beta \n"
+             "2 Ekrana rastgele seyler yazdir henüz çalışmıyor /beta \n"
              "3 Kronometre \n");
         scanf("%d",&secim);
         switch (secim) {
